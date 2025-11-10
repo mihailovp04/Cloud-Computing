@@ -92,11 +92,11 @@ aws s3 ls
 
 В разделе **Permissions** выбрал `Grant public-read access`, чтобы файл стал публичным.
 
-![image](https://imgur.com/G3RIBqs)
+![image](https://imgur.com/G3RIBqs.png)
 
 После загрузки проверил доступ по ссылке — изображение открылось в браузере.
 
-![image](https://imgur.com/eXHIWwo)
+![image](https://imgur.com/eXHIWwo.png)
 
 **Чем отличается ключ (object key) от имени файла?**
 
@@ -112,19 +112,19 @@ aws s3 ls
 aws s3 cp s3-lab/public/avatars/user2.jpg s3://cc-lab4-pub-k13/avatars/user2.jpg --acl public-read
 ```
 
-![image](https://imgur.com/tYWtjYE)
+![image](https://imgur.com/tYWtjYE.png)
 
 ```bash
 aws s3 cp s3-lab/public/content/logo.png s3://cc-lab4-pub-k13/content/logo.png --acl public-read
 ```
 
-![image](https://imgur.com/pVGNpDd)
+![image](https://imgur.com/pVGNpDd.png)
 
 ```bash
 aws s3 cp s3-lab/private/logs/activity.csv s3://cc-lab4-priv-k13/logs/activity.csv
 ```
 
-![image](https://imgur.com/9NQxUp5)
+![image](https://imgur.com/9NQxUp5.png)
 
 Файлы успешно загрузились. Первые два стали публичными, третий — приватным.
 
@@ -144,7 +144,7 @@ https://cc-lab4-pub-k13.s3.eu-central-1.amazonaws.com/avatars/user1.jpg
 
 Изображение загрузилось успешно.
 
-![image](https://imgur.com/eXHIWwo)
+![image](https://imgur.com/eXHIWwo.png)
 
 Затем попробовал открыть приватный файл:
 
@@ -154,7 +154,7 @@ https://cc-lab4-priv-k13.s3.eu-central-1.amazonaws.com/logs/activity.csv
 
 Браузер выдал ошибку *Access Denied*, что и требовалось — приватный бакет работает корректно.
 
-![image](https://imgur.com/lbyzC1r)
+![image](https://imgur.com/lbyzC1r.png)
 
 ---
 
@@ -162,11 +162,11 @@ https://cc-lab4-priv-k13.s3.eu-central-1.amazonaws.com/logs/activity.csv
 
 Я открыл настройки бакета (**Properties → Bucket Versioning**) и включил опцию **Enable versioning**.
 
-![image](https://imgur.com/QzfZFK4)
+![image](https://imgur.com/QzfZFK4.png)
 
 После этого изменил локально файл `logo.png` и снова загрузил его в тот же путь. В разделе **Show versions** появилось две версии одного файла.
 
-![image](https://imgur.com/d6uxSAR)
+![image](https://imgur.com/d6uxSAR.png)
 
 **Что произойдёт, если выключить версионирование после его включения?**
 
@@ -185,7 +185,7 @@ https://cc-lab4-priv-k13.s3.eu-central-1.amazonaws.com/logs/activity.csv
 * Перевод в **Glacier Deep Archive** через 365 дней
 * Удаление через 1825 дней (5 лет)
 
-![image](https://imgur.com/TuATrib)
+![image](https://imgur.com/TuATrib.png)
 
 Сохранил правило — оно появилось в списке активных.
 
@@ -203,7 +203,7 @@ https://cc-lab4-priv-k13.s3.eu-central-1.amazonaws.com/logs/activity.csv
 2. Включил **Static website hosting → Enable**.
 3. Указал индексный файл: `index.html`.
 
-![image](https://imgur.com/rFWDGlS)
+![image](https://imgur.com/rFWDGlS.png)
 
 Сайт стал доступен по адресу:
 
@@ -211,7 +211,7 @@ https://cc-lab4-priv-k13.s3.eu-central-1.amazonaws.com/logs/activity.csv
 http://cc-lab4-web-k13.s3-website.eu-central-1.amazonaws.com
 ```
 
-![image](https://imgur.com/DdtROye)
+![image](https://imgur.com/DdtROye.png)
 
 ---
 
